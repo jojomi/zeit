@@ -133,3 +133,8 @@ func (t *Time) AsLongClock() string {
 func (t *Time) String() string {
 	return t.AsClock()
 }
+
+func IsValidTime(input string) bool {
+	_, err := NewTimeParsed(input)
+	return err == nil
+}
